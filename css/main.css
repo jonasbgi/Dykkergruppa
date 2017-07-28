@@ -1,12 +1,18 @@
-/*General */ 
-body{
+/* General */ 
+body, html{
+    width: 100%;
+    height: calc(100%-12pt);
     margin: 0px;
-	background-color: #E8E5FF;
+    font-size: 12pt;
+    background-color: #e3e9f4;
+    color: black;
 }
 
-main{
-	background-color: #E8E5FF;
+main {
+    margin: 10% 25% 10% 15%;
+    font-family: Roboto, Helvetica, sans-serif;
 }
+
 
 /* Header */
 .dropdown { 
@@ -57,6 +63,7 @@ main{
 }
 #navbar{
     align-content: center;
+    font-family: Roboto, Helvetica, sans-serif;
     /* padding: 0px 20px; */
     /*width: 100%; /*
     height: 48px;
@@ -64,7 +71,67 @@ main{
 }
 
 #headerImg{
-    width: 100%;
+    width: calc(100%-0.2em); /*Adjusted for padding*/
     background-color: white;
 	padding: 0.2em;
+}
+
+
+/* Footer */
+footer{
+    padding: 3% 15%;
+    display: block;
+    background-color: #353536;
+    color: #eee;
+    font-family: Roboto, Helvetica, sans-serif;
+    box-shadow: 0px 500px 0px 500px #353535;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0 0 5% 0;
+    margin: 0;
+    margin-right: 5%;
+    width: 15%;
+    float: left;
+}
+
+footer a{
+    color: #30979E;
+}
+
+
+/** Responsive **/
+@media(min-width: 1900px){
+    body{
+        font-size: 1.5em;
+    }
+}
+
+@media(min-width: 2600px){
+    body{
+        font-size: 2em;
+    }
+}
+
+@media(min-width: 4096px){
+    body{
+        font-size: 3em;
+    }
+}
+
+@media(max-width: 1200px){
+    main, footer{
+        font-size: 1.5em;
+    }
+    main{
+        margin-left: 10%;
+        margin-right: 10%; 
+    }
+    h1{
+        margin-left: 10%;
+    }
+    footer{
+        padding: 5% 10%;
+    }
 }
