@@ -72,8 +72,9 @@ main {
 
 #headerImg{
     width: calc(100%-0.2em); /*Adjusted for padding*/
-    background-color: white;
-	padding: 0.2em;
+    background-image: url(../img/dykk3.jpg);
+    background-size: 100%, 100%;
+	padding: 3.2em;
 }
 
 
