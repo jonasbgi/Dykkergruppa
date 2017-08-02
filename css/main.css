@@ -1,38 +1,52 @@
-/* General */ 
+/** -- General -- **/ 
 body, html{
     width: 100%;
     height: calc(100%-12pt);
     margin: 0px;
-    font-size: 12pt;
+    font-size: 1em;
     background-color: #e3e9f4;
     color: black;
 }
-
 main {
-    margin: 10% 25% 10% 15%;
+    margin: 9% 25% 8% 15%;
     font-family: Roboto, Helvetica, sans-serif;
 }
 
-
-/* Header */
+/** -- Header -- **/
+#navbar{
+    align-content: center;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+#headerImg{
+    width: calc(100%-0.2em); /*Adjusted for padding*/
+    background-color: white;
+	padding: 0.2em;
+}
+/* .dropdown: top-level menu-items 
+	display-property set in menuButton.js to enable dynamic menu */
 .dropdown { 
 	margin: 0px;
-    font-size: 1.2em;
     color: #000000;
     text-align: center;
 	padding: 0.9em 0em; /*Must correspond to .dropdownContent{margin-top}*/
     position: relative;
-    display: block; float: left;
-    min-width: 20%;
+	float: left;
+    min-width: calc(100%/6);
 	background-color: #30979E;
+	cursor: pointer;
 }
 .dropdown:hover{
-    background-color: #29888e;
+	background-color: #29888e;
+}
+.dropdown:hover .dropdownContent {
+	display: block;
+}
+.dropdownContent a:hover{
+	color: #555555;
 }
 .dropdown a{
 	color: #000;
-	text-decoration: none;
-	
+	text-decoration: none;	
 }
 
 .dropdownContent {
@@ -46,11 +60,6 @@ main {
     z-index: 1;
 	min-width: 100%; /*100% of parent class .dropdown*/
 }
-
-.dropdown:hover .dropdownContent {
-    display: block;
-}
-
 .dropdownContent a{
     color: black;
     padding: 0.7em 0.5em;
@@ -58,72 +67,57 @@ main {
     display: block;
 }
 
-.dropdownContent a:hover{
-	color: #555555;
+/* Button to be shown when screenwidth <= 1200 
+	Display also set in menuBtn.js*/
+#menuBtn{
+	display: block;
+	align-content: center;
 }
-#navbar{
-    align-content: center;
-    font-family: Roboto, Helvetica, sans-serif;
-    /* padding: 0px 20px; */
-    /*width: 100%; /*
-    height: 48px;
-    background-color: blue; */
+#menuBtn *{
+	float: left;
+}
+#menuBtn img{
+	margin: 0.2em 0.8em;
+	padding: 0em;
+	height: 1.2em;
+	width: auto;
+}
+#menuBtn span{
+	margin: 5px 0%;
 }
 
-#headerImg{
-    width: calc(100%-0.2em); /*Adjusted for padding*/
-    background-color: white;
-	padding: 0.2em;
-}
-
-
-/* Footer */
+/** -- Footer -- **/
 footer{
-    padding: 3% 15%;
+    padding: 3% 10%;
     display: block;
     background-color: #353536;
     color: #eee;
     font-family: Roboto, Helvetica, sans-serif;
     box-shadow: 0px 500px 0px 500px #353535;
 }
+.footerContent{
+	display: block; float: left;
+	width: 35%; 
+	padding: 0% 0% 0% 10%;
+	margin: 0;
+	align-content: center;
+}
 
 footer ul{
     list-style: none;
-    padding: 0 0 5% 0;
+    padding: 0 0 0 0;
     margin: 0;
-    margin-right: 5%;
-    width: 15%;
+    margin-right: 0%;
+    width: 20%;
     float: left;
 }
-
 footer a{
     color: #30979E;
 }
 
-
-/** Responsive **/
-@media(min-width: 1900px){
-    body{
-        font-size: 1.5em;
-    }
-}
-
-@media(min-width: 2600px){
-    body{
-        font-size: 2em;
-    }
-}
-
-@media(min-width: 4096px){
-    body{
-        font-size: 3em;
-    }
-}
-
+/** -- Responsive -- **/
+/*Changes navbar to menu-view*/
 @media(max-width: 1200px){
-    main, footer{
-        font-size: 1.5em;
-    }
     main{
         margin-left: 10%;
         margin-right: 10%; 
@@ -131,7 +125,40 @@ footer a{
     h1{
         margin-left: 10%;
     }
+	.dropdownContent{
+		margin-top: 0.6em;
+		padding: 0.35em 0em;
+	}
     footer{
         padding: 5% 10%;
     }
+	
+	/*Navbar mobile-friendliness*/
+	.dropdown{
+		width: 100%;
+	}
+	#menuBtn{
+		width: 100%;
+	}
+	.dropdown:hover .dropdownContent{
+		position: static;
+		display: block;
+	}
+}
+/* Changes fonts according to screen resolution */
+@media (max-resolution: 220dpi){
+	body{
+		font-size: 
+	}
+}
+@media (min-resolution: 280dpi), (max-width: 1200px){
+	body{
+		font-size: 1.6em;
+	}
+}
+@media (min-resolution: 320dpi), (max-width: 1200px){
+	body{
+		font-size: 2em;
+		background-color: "blue";
+	}
 }
