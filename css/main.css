@@ -29,7 +29,7 @@ main {
 	height: auto;
 }
 #headerSmall{
-	display: block;
+	display: none;
 	height: 20%; width: auto;
 	padding: 0.3em;
 }
@@ -82,19 +82,20 @@ main {
 	Display also set in menuBtn.js*/
 #menuBtn{
 	display: block;
+	float: none;
 	align-content: center;
+	overflow: auto;
 }
 #menuBtn *{
 	float: left;
 }
 #menuBtn img{
-	margin: 0.2em 0.8em;
-	padding: 0em;
+	padding: 0.2em 0.8em;
 	height: 1.2em;
 	width: auto;
 }
 #menuBtn span{
-	margin: 5px 0%;
+	padding: 0.2em 0%;
 }
 
 /** -- Footer -- **/
@@ -137,7 +138,7 @@ footer a{
         margin-left: 10%;
     }
 	.dropdownContent{
-		margin-top: 0.6em;
+		margin-top: 0em;
 		padding: 0.35em 0em;
 	}
     footer{
