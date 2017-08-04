@@ -96,6 +96,31 @@ main {
 	padding: 0.2em 0%;
 }
 
+/** -- Board -- **/
+.imageAndText{
+	width: 100%;
+	position: relative;
+	margin: 1.8em 1em;
+	display: block;
+	overflow: auto;
+}
+.imageAndText h3, .imageAndText p{
+	margin: 0.1em 0em;
+}
+.imageAndText h3{
+	font-size: 1.2em;
+}
+.imageAndText .boardName{
+	font-weight: bold;
+	font-size: 1em;
+}
+
+.boardContact{
+	font-size: 1em;
+}
+.boardContact p, .boardContact a{
+	display: inline-block;
+}
 /** -- Footer -- **/
 footer{
     padding: 3% 10%;
@@ -154,6 +179,13 @@ footer a{
 		position: static;
 		display: block;
 	}
+	
+	.imageAndText img{
+		display: none;
+	}
+	.imageAndText .textBox{
+		width: 100%;
+	}
 }
 @media(min-width: 1201px){
 	#headerLarge{
@@ -161,6 +193,22 @@ footer a{
 	}
 	#headerSmall{
 		display: none;
+	}
+	
+	/* styret.html */
+	.imageAndText img, .imageAndText .textBox{
+	display: block; float: left;
+	overflow: auto;
+	margin: 0em 2em 0em 0em;
+	}
+	.imageAndText img{
+		width: 8em;
+		height: 8em;
+		border-radius: 50%;
+	}
+	.imageAndText .textBox{
+		margin-top: 0.2em;
+		max-width: calc(100% - 20em);
 	}
 }
 
