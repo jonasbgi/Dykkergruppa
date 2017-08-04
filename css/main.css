@@ -19,8 +19,17 @@ main {
 }
 #headerImg{
     width: calc(100%-0.2em); /*Adjusted for padding*/
-    background-color: white;
-	padding: 0.2em;
+    /*background-image: url(../img/headerBackground.jpg);
+	background-size: contain;*/
+	padding: 0em;
+}
+#headerLarge{
+	display: none; 
+	width: 100%; 
+	height: auto;
+}
+#headerSmall{
+	display: block;
 }
 /* .dropdown: top-level menu-items 
 	display-property set in menuButton.js to enable dynamic menu */
@@ -145,6 +154,15 @@ footer a{
 		display: block;
 	}
 }
+@media(min-width: 1201px){
+	#headerLarge{
+		display: block;
+	}
+	#headerSmall{
+		display: none;
+	}
+}
+
 /* Changes fonts according to screen resolution */
 @media (max-resolution: 220dpi){
 	body{
