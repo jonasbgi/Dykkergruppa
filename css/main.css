@@ -19,8 +19,6 @@ main {
 }
 #headerImg{
     width: calc(100%-0.2em); /*Adjusted for padding*/
-    /*background-image: url(../img/headerBackground.jpg);
-	background-size: contain;*/
 	padding: 0em;
 }
 #headerLarge{
@@ -42,7 +40,7 @@ main {
 	padding: 0.9em 0em; /*Must correspond to .dropdownContent{margin-top}*/
     position: relative;
 	float: left;
-    min-width: calc(100%/6);
+    min-width: calc(100%/5);
 	background-color: #30979E;
 	cursor: pointer;
 }
