@@ -30,6 +30,8 @@ main {
 }
 #headerSmall{
 	display: block;
+	height: 20%; width: auto;
+	padding: 0.3em;
 }
 /* .dropdown: top-level menu-items 
 	display-property set in menuButton.js to enable dynamic menu */
