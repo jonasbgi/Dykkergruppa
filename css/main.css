@@ -121,6 +121,22 @@ main {
 .boardContact p, .boardContact a{
 	display: inline-block;
 }
+
+/** -- Tabell -- **/
+table{
+	width: 100%;
+	border-collapse: collapse;
+}
+th, td{
+	text-align: left;
+	padding: 1%;
+}
+
+tr:nth-child(even){
+	background-color: #C9E1EA;
+}
+
+
 /** -- Footer -- **/
 footer{
     padding: 3% 10%;
@@ -140,7 +156,7 @@ footer{
 
 footer ul{
     list-style: none;
-    padding: 0 0 0 0;
+    padding: 0 0 5% 0;
     margin: 0;
     margin-right: 0%;
     width: 20%;
