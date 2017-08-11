@@ -11,7 +11,17 @@ main {
     margin: 9% 25% 8% 15%;
     font-family: Roboto, Helvetica, sans-serif;
 }
-
+.subtext{
+    font-size: 0.9em;
+    font-style: italic;
+}
+h2, h3, h4{
+    margin-top: 1.5em;
+    margin-bottom: 0.2em;
+}
+p{
+    margin-top: 0em;
+}
 /** -- Header -- **/
 #navbar{
     align-content: center;
@@ -114,7 +124,6 @@ main {
 	font-weight: bold;
 	font-size: 1em;
 }
-
 .boardContact{
 	font-size: 1em;
 }
@@ -122,6 +131,10 @@ main {
 	display: inline-block;
 }
 
+.squareShown{
+    width: 16em;
+    height: auto;
+}
 /** -- Tabell -- **/
 table{
 	width: 100%;
@@ -131,9 +144,11 @@ th, td{
 	text-align: left;
 	padding: 1%;
 }
-
+tr{
+    /*border-bottom: 1px solid #a2b6bf;*/
+}
 tr:nth-child(even){
-	background-color: #C9E1EA;
+	background-color: #b6d6e2;
 }
 
 
@@ -166,6 +181,18 @@ footer a{
     color: #30979E;
 }
 
+/** -- Lists -- **/
+.list{
+    margin: 1.5em 0em 2em 0em;
+}
+ol, ul{
+    margin: 0em;
+    padding-left: 1em;
+}
+ol li, ul li{
+    margin: 1em 0em;
+}
+
 /** -- Responsive -- **/
 /*Changes navbar to menu-view*/
 @media(max-width: 1200px){
@@ -196,12 +223,16 @@ footer a{
 		display: block;
 	}
 	
-	.imageAndText img{
+	.roundResponsiveImage{
 		display: none;
 	}
 	.imageAndText .textBox{
 		width: 100%;
 	}
+    .squareShown{
+        width: 60%;
+        height: auto;
+    }
 }
 @media(min-width: 1201px){
 	#headerLarge{
@@ -217,7 +248,7 @@ footer a{
 	overflow: auto;
 	margin: 0em 2em 0em 0em;
 	}
-	.imageAndText img{
+	.roundResponsiveImage{
 		width: 8em;
 		height: 8em;
 		border-radius: 50%;
