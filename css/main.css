@@ -8,10 +8,20 @@ body, html{
     color: black;
 }
 main {
-    margin: 9% 25% 8% 15%;
+    margin: 7% 25% 8% 15%;
     font-family: Roboto, Helvetica, sans-serif;
 }
-
+.subtext{
+    font-size: 0.9em;
+    font-style: italic;
+}
+h2, h3, h4{
+    margin-top: 1.5em;
+    margin-bottom: 0.2em;
+}
+p{
+    margin-top: 0em;
+}
 /** -- Header -- **/
 #navbar{
     align-content: center;
@@ -100,7 +110,7 @@ main {
 .imageAndText{
 	width: 100%;
 	position: relative;
-	margin: 1.8em 1em;
+	margin: 1.8em 0em;
 	display: block;
 	overflow: auto;
 }
@@ -114,14 +124,16 @@ main {
 	font-weight: bold;
 	font-size: 1em;
 }
-
 .boardContact{
 	font-size: 1em;
 }
 .boardContact p, .boardContact a{
 	display: inline-block;
 }
-
+.squareShown{
+    width: 16em;
+    height: auto;
+}
 /** -- Tabell -- **/
 table{
 	width: 100%;
@@ -131,9 +143,11 @@ th, td{
 	text-align: left;
 	padding: 1%;
 }
-
+tr{
+    /*border-bottom: 1px solid #a2b6bf;*/
+}
 tr:nth-child(even){
-	background-color: #C9E1EA;
+	background-color: #b6d6e2;
 }
 
 
@@ -166,6 +180,20 @@ footer a{
     color: #30979E;
 }
 
+/** -- Lists -- **/
+.list{
+    margin: 1.5em 0em 2em 0em;
+}
+ol, ul{
+    margin: 0em;
+    padding-left: 1em;
+}
+ol li, ul li{
+    margin: 1em 0em;
+}
+li ol li, li ul li{
+    margin: 0em 0em 0.2em 1em;
+}
 /** -- Responsive -- **/
 /*Changes navbar to menu-view*/
 @media(max-width: 1200px){
@@ -196,12 +224,16 @@ footer a{
 		display: block;
 	}
 	
-	.imageAndText img{
+	.roundImageContainer{
 		display: none;
 	}
 	.imageAndText .textBox{
 		width: 100%;
 	}
+    .squareShown{
+        width: 60%;
+        height: auto;
+    }
 }
 @media(min-width: 1201px){
 	#headerLarge{
@@ -210,18 +242,33 @@ footer a{
 	#headerSmall{
 		display: none;
 	}
-	
+    h2{
+        font-size: 2em;
+    }
+    
 	/* styret.html */
-	.imageAndText img, .imageAndText .textBox{
+    #boardHeader{
+        margin-left: 5.5em;
+    }
+	.imageAndText div, .imageAndText .textBox{
 	display: block; float: left;
-	overflow: auto;
-	margin: 0em 2em 0em 0em;
-	}
-	.imageAndText img{
-		width: 8em;
-		height: 8em;
+    }
+    
+    /*.imageAndText .textBox{
+        overflow: hidden;
+    }*/
+    
+	.roundImageContainer{
+		width: 9em;
+		height: 9em;
 		border-radius: 50%;
+        overflow: hidden;
+        margin-right: 2em;
 	}
+    .roundResponsiveImage{
+        min-width: 100%;
+        min-height: 100%;
+    }
 	.imageAndText .textBox{
 		margin-top: 0.2em;
 		max-width: calc(100% - 20em);

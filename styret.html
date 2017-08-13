@@ -8,9 +8,10 @@
 <body>
     <header></header> <!-- Content loaded from script -->
     <main>
-        <h2>Styret</h2>
+        <h2 id="boardHeader">Styret</h2>
 		<div class="imageAndText">
-			<img src="img/boardStangIn.jpg" type="image/jpg"/>
+            <!-- Class roundImage also hides in narrow screens -->
+            <div class="roundImageContainer"><img src="img/boardLeader.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
 			<div class="textBox">
 				<h3>Leder</h3>
 				<p class="boardName">Thea Skylstad</p>
@@ -18,11 +19,11 @@
 					<p>000 00 000</p>
 					<a href="#">leder@dykkergruppa.no</a>
 				</div>
-				<p>Lederen i dykkergruppa har et overordnet ansvar for styret og klubben generelt. Lederen er i teorien sjelden involvert i dagligdags arbeid, men innblandet i større og viktigere oppgaver.</p>
+                <div><p>Lederen i dykkergruppa har et overordnet ansvar for styret og klubben generelt. Lederen er i teorien sjelden involvert i dagligdags arbeid, men innblandet i større og viktigere oppgaver.</p></div>
 			</div>
 		</div>
 		<div class="imageAndText">
-			<img src="img/boardStangIn.jpg" type="image/jpg"/>
+            <div class="roundImageContainer"><img src="img/boardUVR.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
 			<div class="textBox">
 				<h3>UVR-Oppmann</h3>
 				<p class="boardName">Stian Håland</p>
@@ -30,11 +31,11 @@
 					<p>000 00 000</p>
 					<a href="#">uvr@dykkergruppa.no</a>
 				</div>
-				<p>UVR-oppmannen er ansvarlig for alt som har med undervannsrugby å gjøre, som å ordne hallleie og treninger.</p>
+                <div><p>UVR-oppmannen er ansvarlig for alt som har med undervannsrugby å gjøre, som å ordne hallleie og treninger.</p></div>
 			</div>
 		</div>
 		<div class="imageAndText">
-			<img src="img/boardStangIn.jpg" type="image/jpg"/>
+            <div class="roundImageContainer"><img src="img/boardTreasurer.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
 			<div class="textBox">
 				<h3>Kasserer</h3>
 				<p class="boardName">Else-Marie Frafjord</p>
@@ -42,21 +43,94 @@
 					<p>000 00 000</p>
 					<a href="#">kasserer@dykkergruppa.no</a>
 				</div>
-				<p>Kasseren håndterer alt av fakturering, dekke av reiser, budsjett og oppgjør ellers.</p>
+                <div><p>Kasseren håndterer alt av fakturering, dekke av reiser, budsjett og oppgjør ellers.</p></div>
 			</div>
 		</div>
 		<div class="imageAndText">
-			<img src="img/boardStangIn.jpg" type="image/jpg"/>
+            <div class="roundImageContainer"><img src="img/boardEquipment.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
 			<div class="textBox">
 				<h3>Matrealforvalter</h3>
 				<p class="boardName">Martin Rønning</p>
 				<div class="boardContact">
 					<p>000 00 000</p>
-					<a href="#">matreal@dykkergruppa.no</a>
+					<a href="#">materialforvalter@dykkergruppa.no</a>
 				</div>
-				<p>Matrealforvalteren organiserer utleie av DGs utstyr, med unntak av Fjøset (fjøsrøkter). I-bygget, samt reparasjon av utstyr er også del av matrealforvalters ansvar</p>
+                <div><p>Matrealforvalteren organiserer utleie av DGs utstyr, med unntak av Fjøset (fjøsrøkter). I-bygget, samt reparasjon av utstyr er også del av matrealforvalters ansvar</p></div>
 			</div>
 		</div>
+        <div class="imageAndText">
+            <div class="roundImageContainer"><img src="img/boardSafety.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
+			<div class="textBox">
+				<h3>Sikkerhetsleder</h3>
+				<p class="boardName">Hans-Henning Heyn</p>
+				<div class="boardContact">
+					<p>000 00 000</p>
+					<a href="#">sikkerhetsleder@dykkergruppa.no</a>
+				</div>
+                <div><p>Sikkerhetslederen er ansvarlig for at DGs sikkerhetsregler følges på søndagsdykk og ellers, samt at søndagsdykk blir arrangert. I tillegg er det sikkerhetslederen som har hovedansvaret for å arrangere Munholmen Rally</p></div>
+			</div>
+		</div>
+        <div class="imageAndText">
+            <div class="roundImageContainer"><img src="img/boardDypet.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
+			<div class="textBox">
+				<h3>Kjellersjef</h3>
+				<p class="boardName">Sofie Jakobsen</p>
+				<div class="boardContact">
+					<p>000 00 000</p>
+					<a href="#">kjellersjef@dykkergruppa.no</a>
+				</div>
+                <div>	<p>Med dypet stengt skulle en tro at Kjellersjefen er en kaptein uten skute. Tvert imot, så har dette vervet oppgaver: Se til at torsdagsmøter blir arrangert hvor mulig, samt hovedansvar for å forhandle om Dypet med Sit osv.</p></div>
+			</div>
+		</div>
+        <div class="imageAndText">
+            <div class="roundImageContainer"><img src="img/boardRector.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
+			<div class="textBox">
+				<h3>Rektor</h3>
+				<p class="boardName">Thea Helen Johnsplass</p>
+				<div class="boardContact">
+					<p>000 00 000</p>
+					<a href="#">rektor@dykkergruppa.no</a>
+				</div>
+                <div><p>Rektoren har, som kanskje antydet, ansvar for kursene i DG. Rugby sine dommerkurs og nybegynnertreinger kan derimot styres av UVR-oppmann. DG holder derimot oppfriskningsdykk og grunnkurs i dykking, som er rektors ansvar.</p></div>
+			</div>
+		</div>
+        <div class="imageAndText">
+            <div class="roundImageContainer"><img src="img/boardTrip.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
+			<div class="textBox">
+				<h3>Tursjef</h3>
+				<p class="boardName">Jonas Giske</p>
+				<div class="boardContact">
+					<p>000 00 000</p>
+					<a href="#">tursjef@dykkergruppa.no</a>
+				</div>
+                <div><p>Tursjefen er DGs aller kuleste styremedlem. Ingen over, ingen ved siden av. Tursjefen er som regel å finne på store dyp; enten ved Hitra eller i rosebollen.</p></div>
+			</div>
+		</div>
+        <div class="imageAndText">
+            <div class="roundImageContainer"><img src="img/boardPR.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
+			<div class="textBox">
+				<h3>PR-sjef</h3>
+				<p class="boardName">Vegard Brandal Hansen</p>
+				<div class="boardContact">
+					<p>000 00 000</p>
+					<a href="#">prsjef@dykkergruppa.no</a>
+				</div>
+                <div><p>PR-sjefen står for DGs profilering. Om du møtte oss på stand, var det som ba oss være der. </p></div>
+			</div>
+		</div>
+        <div class="imageAndText">
+            <div class="roundImageContainer"><img src="img/boardBoat.jpg" type="image/jpg" class="roundResponsiveImage"/></div>
+			<div class="textBox">
+				<h3>Fjøsrøkter</h3>
+				<p class="boardName">Axel Hansen Grøvdal</p>
+				<div class="boardContact">
+					<p>000 00 000</p>
+					<a href="#">fjos@dykkergruppa.no</a>
+				</div>
+                <div><p>Fjøsrøkteren har ansvaret for båten vår - Fjøset II. Han ordner med utleie av båten samt vedlikehold. Ofte kjører han båten selv ved utleie, og oppfordres ellers DG til å bruke den mer på søndagsdykk</p></div>
+			</div>
+		</div>
+        <p>Ønsker du å ta kontakt med hele styret? Bruk da listen styret@dykkergruppa.no</p>
     </main>
     <footer></footer>
     <script src="script/jQuery.js"></script>
