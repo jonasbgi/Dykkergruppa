@@ -8,7 +8,7 @@ body, html{
     color: black;
 }
 main {
-    margin: 9% 25% 8% 15%;
+    margin: 7% 25% 8% 15%;
     font-family: Roboto, Helvetica, sans-serif;
 }
 .subtext{
@@ -110,7 +110,7 @@ p{
 .imageAndText{
 	width: 100%;
 	position: relative;
-	margin: 1.8em 1em;
+	margin: 1.8em 0em;
 	display: block;
 	overflow: auto;
 }
@@ -130,7 +130,6 @@ p{
 .boardContact p, .boardContact a{
 	display: inline-block;
 }
-
 .squareShown{
     width: 16em;
     height: auto;
@@ -192,7 +191,9 @@ ol, ul{
 ol li, ul li{
     margin: 1em 0em;
 }
-
+li ol li, li ul li{
+    margin: 0em 0em 0.2em 1em;
+}
 /** -- Responsive -- **/
 /*Changes navbar to menu-view*/
 @media(max-width: 1200px){
@@ -223,7 +224,7 @@ ol li, ul li{
 		display: block;
 	}
 	
-	.roundResponsiveImage{
+	.roundImageContainer{
 		display: none;
 	}
 	.imageAndText .textBox{
@@ -241,18 +242,33 @@ ol li, ul li{
 	#headerSmall{
 		display: none;
 	}
-	
+    h2{
+        font-size: 2em;
+    }
+    
 	/* styret.html */
-	.imageAndText img, .imageAndText .textBox{
+    #boardHeader{
+        margin-left: 5.5em;
+    }
+	.imageAndText div, .imageAndText .textBox{
 	display: block; float: left;
-	overflow: auto;
-	margin: 0em 2em 0em 0em;
-	}
-	.roundResponsiveImage{
-		width: 8em;
-		height: 8em;
+    }
+    
+    /*.imageAndText .textBox{
+        overflow: hidden;
+    }*/
+    
+	.roundImageContainer{
+		width: 9em;
+		height: 9em;
 		border-radius: 50%;
+        overflow: hidden;
+        margin-right: 2em;
 	}
+    .roundResponsiveImage{
+        min-width: 100%;
+        min-height: 100%;
+    }
 	.imageAndText .textBox{
 		margin-top: 0.2em;
 		max-width: calc(100% - 20em);
