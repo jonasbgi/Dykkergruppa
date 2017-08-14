@@ -43,22 +43,31 @@ p{
 }
 /* .dropdown: top-level menu-items 
 	display-property set in menuButton.js to enable dynamic menu */
+.dropdownContainer{
+    text-align: center;
+    position: relative;
+	float: left;
+    min-width: 20%;
+}
+
 .dropdown { 
 	margin: 0px;
     color: #000000;
-    text-align: center;
+
 	padding: 0.9em 0em; /*Must correspond to .dropdownContent{margin-top}*/
-    position: relative;
-	float: left;
-    min-width: calc(100%/5);
+
+    min-width: 100%;
 	background-color: #30979E;
 	cursor: pointer;
 }
 .dropdown:hover{
 	background-color: #29888e;
 }
-.dropdown:hover .dropdownContent {
+.dropdown:hover + .dropdownContent {
 	display: block;
+}
+.dropdownContent:hover{
+    display: block;
 }
 .dropdownContent a:hover{
 	color: #555555;
@@ -71,7 +80,6 @@ p{
 .dropdownContent {
 	align-content: center;
 	margin: 0em;
-	margin-top: 0.9em;
     padding: 0.5em 0em;
     display: none;
     position: absolute;
@@ -89,7 +97,7 @@ p{
 /* Button to be shown when screenwidth <= 1200 
 	Display also set in menuBtn.js*/
 #menuBtn{
-	display: block;
+	display: none;
 	float: none;
 	align-content: center;
 	overflow: auto;
@@ -213,13 +221,15 @@ li ol li, li ul li{
     }
 	
 	/*Navbar mobile-friendliness*/
-	.dropdown{
+	.dropdownContainer{
 		width: 100%;
+        display: none;
 	}
 	#menuBtn{
 		width: 100%;
+        display: block;
 	}
-	.dropdown:hover .dropdownContent{
+	.dropdown:hover + dropdownContent{
 		position: static;
 		display: block;
 	}
@@ -251,7 +261,7 @@ li ol li, li ul li{
         margin-left: 5.5em;
     }
 	.imageAndText div, .imageAndText .textBox{
-	display: block; float: left;
+	   display: block; float: left;
     }
     
     /*.imageAndText .textBox{
