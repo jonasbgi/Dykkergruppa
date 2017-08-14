@@ -43,22 +43,31 @@ p{
 }
 /* .dropdown: top-level menu-items 
 	display-property set in menuButton.js to enable dynamic menu */
-.dropdown { 
+.dropdownContainer{
+    min-width: 20%;
+    height: auto;
+    float: left;
+     /*Must correspond to .dropdownContent{margin-top}*/
+    position: relative;
+}
+
+.dropdown{ 
 	margin: 0px;
     color: #000000;
     text-align: center;
-	padding: 0.9em 0em; /*Must correspond to .dropdownContent{margin-top}*/
-    position: relative;
-	float: left;
-    min-width: calc(100%/5);
 	background-color: #30979E;
 	cursor: pointer;
+    padding: 0.9em 0em;
+    min-width: 100%;
 }
 .dropdown:hover{
 	background-color: #29888e;
 }
-.dropdown:hover .dropdownContent {
+.dropdown:hover + .dropdownContent {
 	display: block;
+}
+.dropdownContent:hover{
+    display: block;
 }
 .dropdownContent a:hover{
 	color: #555555;
@@ -70,8 +79,8 @@ p{
 
 .dropdownContent {
 	align-content: center;
+    text-align: center;
 	margin: 0em;
-	margin-top: 0.9em;
     padding: 0.5em 0em;
     display: none;
     position: absolute;
@@ -89,7 +98,7 @@ p{
 /* Button to be shown when screenwidth <= 1200 
 	Display also set in menuBtn.js*/
 #menuBtn{
-	display: block;
+	display: none;
 	float: none;
 	align-content: center;
 	overflow: auto;
@@ -213,10 +222,13 @@ li ol li, li ul li{
     }
 	
 	/*Navbar mobile-friendliness*/
-	.dropdown{
+	.dropdownContainer{
 		width: 100%;
-	}
+        position: relative;
+        display: none;
+    }
 	#menuBtn{
+        display: block;
 		width: 100%;
 	}
 	.dropdown:hover .dropdownContent{

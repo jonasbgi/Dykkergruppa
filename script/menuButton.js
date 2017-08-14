@@ -2,8 +2,8 @@
 /* Inputs: display settings for #menuBtn and .dropdown classes. Applies changes */
 function showOrHideMenu(menuDisplay, ddDisplay) {
 	"use strict";
-	$(".dropdown").css("display", ddDisplay);
-	$("#menuBtn").css("display", menuDisplay);
+    $("#menuBtn").css("display", menuDisplay);
+	$(".dropdownContainer").css("display", ddDisplay);
 }
 /* Called by #menuBtn. Toggles .dropdowns visibility */
 function showHide() {
