@@ -36,11 +36,6 @@ p{
 	width: 100%; 
 	height: auto;
 }
-#headerSmall{
-	display: none;
-	height: 20%; width: auto;
-	padding: 0.3em;
-}
 /* .dropdown: top-level menu-items 
 	display-property set in menuButton.js to enable dynamic menu */
 .dropdownContainer{
@@ -181,11 +176,14 @@ footer ul{
     padding: 0 0 5% 0;
     margin: 0;
     margin-right: 0%;
-    width: 20%;
+    width: 40%;
     float: left;
 }
 footer a{
     color: #30979E;
+}
+.footersubText{
+    color: #939393;
 }
 
 /** -- Lists -- **/
@@ -248,9 +246,6 @@ li ol li, li ul li{
 @media(min-width: 1201px){
 	#headerLarge{
 		display: block;
-	}
-	#headerSmall{
-		display: none;
 	}
     h2{
         font-size: 2em;
