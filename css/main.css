@@ -71,8 +71,6 @@ p{
     min-width: 100%;
 	background-color: #30979E;
 	cursor: pointer;
-    padding: 0.9em 0em;
-    min-width: 100%;
 }
 .dropdown:hover{
 	background-color: #29888e;
@@ -134,8 +132,9 @@ p{
 	width: 100%;
 	position: relative;
 	margin: 1.8em 0em;
-	display: block;
-	overflow: auto;
+    /* Uses flexbox - this means that the elements inside are placed beside each other if there are space*/
+	display: flex;
+    flex-direction: row;
 }
 .imageAndText h3, .imageAndText p{
 	margin: 0.1em 0em;
@@ -195,7 +194,6 @@ footer ul{
     list-style: none;
     padding: 0 0 5% 0;
     margin: 0;
-    margin-right: 0%;
     width: 40%;
     float: left;
 }
@@ -283,6 +281,10 @@ li ol li, li ul li{
     }*/
 
 	.roundImageContainer{
+        /* flex-grow (defines the ability for a flex item to grow if necessary),
+         flex-shrink (defines the ability for a flex item to shrink if necessary),
+         flex-basis (defines the default size of an element before the remaining space is distributed) */
+        flex: 0 0 9em;
 		width: 9em;
 		height: 9em;
 		border-radius: 50%;
@@ -294,8 +296,8 @@ li ol li, li ul li{
         min-height: 100%;
     }
 	.imageAndText .textBox{
+        flex: 1 1 0;
 		margin-top: 0.2em;
-		max-width: calc(100% - 20em);
 	}
 }
 
