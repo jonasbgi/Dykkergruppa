@@ -1,14 +1,14 @@
 /** -- General -- **/ 
 body, html{
     width: 100%;
-    height: calc(100%-12pt);
+    height: calc(100% - 12pt);
     margin: 0px;
     font-size: 1em;
     background-color: #e3e9f4;
     color: black;
 }
 main {
-    margin: 7% 32% 8% 22%;
+    margin: 7% 22% 8% 22%;
     font-family: Roboto, Helvetica, sans-serif;
 }
 main img{
@@ -39,6 +39,9 @@ h2, h3, h4{
     margin-top: 1.5em;
     margin-bottom: 0.2em;
 }
+h2{
+    font-size: 2em;
+}
 p{
     margin-top: 0em;
 }
@@ -48,7 +51,6 @@ p{
     font-family: Roboto, Helvetica, sans-serif;
 }
 #headerImg{
-    width: calc(100%-0.2em); /*Adjusted for padding*/
 	padding: 0em;
 }
 #headerLarge{
@@ -72,8 +74,6 @@ p{
     min-width: 100%;
 	background-color: #30979E;
 	cursor: pointer;
-    padding: 0.9em 0em;
-    min-width: 100%;
 }
 .dropdown:hover{
 	background-color: #29888e;
@@ -131,12 +131,17 @@ p{
 }
 
 /** -- Board -- **/
+#boardHeader{
+    margin-left: 5.5em;
+}
+
 .imageAndText{
 	width: 100%;
 	position: relative;
 	margin: 1.8em 0em;
-	display: block;
-	overflow: auto;
+    /* Uses flexbox - this means that the elements inside are placed beside each other if there are space*/
+	display: flex;
+    flex-direction: row;
 }
 .imageAndText h3, .imageAndText p{
 	margin: 0.1em 0em;
@@ -196,7 +201,6 @@ footer ul{
     list-style: none;
     padding: 0 0 5% 0;
     margin: 0;
-    margin-right: 0%;
     width: 40%;
     float: left;
 }
@@ -226,7 +230,7 @@ li ol li, li ul li{
 @media(max-width: 700px){
     main{
         margin-left: 10%;
-        margin-right: 10%; 
+        margin-right: 10%;
     }
     h1{
         margin-left: 10%;
@@ -266,24 +270,24 @@ li ol li, li ul li{
         height: auto;
     }
 }
+
+/* Needed to be able to show the images in the styret.html file. */
+
+/* If we are going to remove one of these @media elements
+ we need to remove the one above (@media(max-width: 700px) and base the rest of the css code on that
+ the media width is less than 700px. */
 @media(min-width: 701px){
-    h2{
-        font-size: 2em;
-    }
-    
 	/* styret.html */
-    #boardHeader{
-        margin-left: 5.5em;
+
+    .imageAndText div{
+        display: block; float: left;
     }
-	.imageAndText div, .imageAndText .textBox{
-	   display: block; float: left;
-    }
-    
-    /*.imageAndText .textBox{
-        overflow: hidden;
-    }*/
-    
+
 	.roundImageContainer{
+        /* flex-grow (defines the ability for a flex item to grow if necessary),
+         flex-shrink (defines the ability for a flex item to shrink if necessary),
+         flex-basis (defines the default size of an element before the remaining space is distributed) */
+        flex: 0 0 9em;
 		width: 9em;
 		height: 9em;
 		border-radius: 50%;
@@ -295,8 +299,8 @@ li ol li, li ul li{
         min-height: 100%;
     }
 	.imageAndText .textBox{
+        flex: 1 1 0;
 		margin-top: 0.2em;
-		max-width: calc(100% - 20em);
 	}
 }
 
