@@ -1,14 +1,14 @@
 /** -- General -- **/ 
 body, html{
     width: 100%;
-    height: calc(100%-12pt);
+    height: calc(100% - 12pt);
     margin: 0px;
     font-size: 1em;
     background-color: #e3e9f4;
     color: black;
 }
 main {
-    margin: 7% 32% 8% 22%;
+    margin: 7% 22% 8% 22%;
     font-family: Roboto, Helvetica, sans-serif;
 }
 main img{
@@ -48,7 +48,6 @@ p{
     font-family: Roboto, Helvetica, sans-serif;
 }
 #headerImg{
-    width: calc(100%-0.2em); /*Adjusted for padding*/
 	padding: 0em;
 }
 #headerLarge{
@@ -270,7 +269,7 @@ li ol li, li ul li{
     h2{
         font-size: 2em;
     }
-    
+
 	/* styret.html */
     #boardHeader{
         margin-left: 5.5em;
@@ -278,11 +277,11 @@ li ol li, li ul li{
 	.imageAndText div, .imageAndText .textBox{
 	   display: block; float: left;
     }
-    
+
     /*.imageAndText .textBox{
         overflow: hidden;
     }*/
-    
+
 	.roundImageContainer{
 		width: 9em;
 		height: 9em;
