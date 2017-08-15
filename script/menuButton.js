@@ -19,9 +19,9 @@ function showHide() {
 /* Hides or shows #menuBtn and .dropdown based on windowsize */
 function changedWindowSize() {
 	"use strict";
-	if ($(window).width() > 1200) {
+	if ($(window).width() > 700) {
 		showOrHideMenu("none", "inline-block");
-	} else if ($(window).width() <= 1200) {
+	} else if ($(window).width() <= 800) {
 		showOrHideMenu("block", "none");
 	}
 }

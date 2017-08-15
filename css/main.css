@@ -8,8 +8,28 @@ body, html{
     color: black;
 }
 main {
-    margin: 7% 25% 8% 15%;
+    margin: 7% 32% 8% 22%;
     font-family: Roboto, Helvetica, sans-serif;
+}
+main img{
+    max-width: 80%;
+    height: auto;
+}
+.imageRight{
+    max-width: 40%;
+    height: auto;
+    float: right;
+    position: relative;
+    display: inline-block;
+    right: -5%;
+}
+.imageLeft{
+    max-width: 40%;
+    height: auto;
+    float: left;
+    position: relative;
+    display: inline-block;
+    left: -5%;
 }
 .subtext{
     font-size: 0.9em;
@@ -32,7 +52,7 @@ p{
 	padding: 0em;
 }
 #headerLarge{
-	display: none; 
+	display: block; 
 	width: 100%; 
 	height: auto;
 }
@@ -203,7 +223,7 @@ li ol li, li ul li{
 }
 /** -- Responsive -- **/
 /*Changes navbar to menu-view*/
-@media(max-width: 1200px){
+@media(max-width: 700px){
     main{
         margin-left: 10%;
         margin-right: 10%; 
@@ -246,10 +266,7 @@ li ol li, li ul li{
         height: auto;
     }
 }
-@media(min-width: 1201px){
-	#headerLarge{
-		display: block;
-	}
+@media(min-width: 701px){
     h2{
         font-size: 2em;
     }
@@ -284,19 +301,14 @@ li ol li, li ul li{
 }
 
 /* Changes fonts according to screen resolution */
-@media (max-resolution: 220dpi){
+
+@media (min-resolution: 280dpi) and (max-width: 700px){
 	body{
-		font-size: 
+		font-size: 1em;
 	}
 }
-@media (min-resolution: 280dpi), (max-width: 1200px){
-	body{
-		font-size: 1.6em;
-	}
-}
-@media (min-resolution: 320dpi), (max-width: 1200px){
+@media (min-resolution: 360dpi) and (max-width: 700px){
 	body{
 		font-size: 2em;
-		background-color: "blue";
 	}
 }
