@@ -39,6 +39,9 @@ h2, h3, h4{
     margin-top: 1.5em;
     margin-bottom: 0.2em;
 }
+h2{
+    font-size: 2em;
+}
 p{
     margin-top: 0em;
 }
@@ -128,6 +131,10 @@ p{
 }
 
 /** -- Board -- **/
+#boardHeader{
+    margin-left: 5.5em;
+}
+
 .imageAndText{
 	width: 100%;
 	position: relative;
@@ -223,7 +230,7 @@ li ol li, li ul li{
 @media(max-width: 700px){
     main{
         margin-left: 10%;
-        margin-right: 10%; 
+        margin-right: 10%;
     }
     h1{
         margin-left: 10%;
@@ -263,22 +270,18 @@ li ol li, li ul li{
         height: auto;
     }
 }
+
+/* Needed to be able to show the images in the styret.html file. */
+
+/* If we are going to remove one of these @media elements
+ we need to remove the one above (@media(max-width: 700px) and base the rest of the css code on that
+ the media width is less than 700px. */
 @media(min-width: 701px){
-    h2{
-        font-size: 2em;
-    }
-
 	/* styret.html */
-    #boardHeader{
-        margin-left: 5.5em;
-    }
-	.imageAndText div, .imageAndText .textBox{
-	   display: block; float: left;
-    }
 
-    /*.imageAndText .textBox{
-        overflow: hidden;
-    }*/
+    .imageAndText div{
+        display: block; float: left;
+    }
 
 	.roundImageContainer{
         /* flex-grow (defines the ability for a flex item to grow if necessary),
